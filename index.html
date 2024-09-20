@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siyang Ni - Professional CV</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Add active class to current nav item
+            const currentLocation = location.href;
+            const menuItems = document.querySelectorAll('.nav-link');
+            const menuLength = menuItems.length;
+            for (let i = 0; i < menuLength; i++) {
+                if (menuItems[i].href === currentLocation) {
+                    menuItems[i].classList.add('active');
+                }
+            }
+        });
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Siyang Ni</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="education.html">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching.html">Teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <header class="jumbotron">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="profile3.jpg" alt="Siyang Ni" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4">Siyang Ni</h1>
+                    <p class="lead">PhD Candidate in Criminology and Social Data Analytics</p>
+                    <hr class="my-4">
+                    <p>Department of Sociology and Criminology, Pennsylvania State University</p>
+                </div>
+            </div>
+        </header>
+
+        <section id="summary">
+            <h2>Summary of Qualifications</h2>
+            <ul>
+                <li>Experience in: Causal Inference, Time-Series Data, Structural Equation Model</li>
+                <li>Proficient in: R, Python, SQL, Stata, Mplus, Latex, Linux</li>
+                <li>Graduate Instructor on Intermediate Social Statistics</li>
+                <li>Areas of Expertise: Data Science, Life Course, Human Development</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>1001 Oswald Tower, Pennsylvania State University, University Park, PA 16801</p>
+            <p>Email: siyangni@psu.edu</p>
+            <p>Phone: 814-865-2527</p>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p>&copy; 2024 Siyang Ni. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
