@@ -1,51 +1,89 @@
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+/* Custom styles */
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-h1, h2, h3 {
-    font-family: 'Georgia', serif;
-    color: #2c3e50;
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+.divider {
+    border-top: 1px solid #e9ecef;
+    margin: 30px 0;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: #2c3e50 !important;
+.btn-primary {
+    background-color: #347c2a;
+    border-color: #347c2a;
 }
 
-.jumbotron {
-    background-color: #ecf0f1;
-    border-radius: 0;
+.btn-primary:hover {
+    background-color: #296322;
+    border-color: #296322;
 }
 
-.display-4 {
-    font-weight: bold;
+#summary {
+    background-color: #f8f9fa;
 }
 
-#summary ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#summary li {
+h2 {
+    color: #0832a3;
     margin-bottom: 10px;
 }
 
-#contact p {
+.jumbotron {
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.card-body {
+    padding: 15px; 
+  }
+
+  #summary ul, #contact p {
     margin-bottom: 5px;
+  }
+  
+  .card-body {
+    padding: 10px; /* Reduced padding */
+  }
+
+
+.container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .section-bg {
+    background-color: #f8f9fa;
+    margin-bottom: 5px; 
+    padding: 10px 0; 
+  }
+
+
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-footer {
-    border-top: 1px solid #ddd;
+.logo-img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .jumbotron {
-        padding: 2rem 1rem;
-    }
+.logo-img:hover {
+    transform: scale(1.1);
 }
