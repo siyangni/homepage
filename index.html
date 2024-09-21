@@ -8,37 +8,14 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Add active class to current nav item
-            const currentLocation = location.href;
-            const menuItems = document.querySelectorAll('.nav-link');
-            const menuLength = menuItems.length;
-            for (let i = 0; i < menuLength; i++) {
-                if (menuItems[i].href === currentLocation) {
-                    menuItems[i].classList.add('active');
-                }
-            }
-        });
-    </script>
-
+    <!-- Navigation menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Siyang Ni</a>
+        <a class="navbar-brand" href="index.html">Siyang Ni</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -58,41 +35,88 @@
         </div>
     </nav>
 
-    <main class="container mt-4">
-        <header class="jumbotron">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="profile3.jpg" alt="Siyang Ni" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+    
+<!-- header -->
+    <header class="jumbotron jumbotron-fluid" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="profile3.jpg" alt="Siyang Ni" class="img-fluid profile-img rounded-circle mb-3">
+                    <div class="logo-container mt-3">
+                        <a href="https://www.icds.psu.edu/" target="_blank">
+                            <img src="psu_dsi.png" alt="psu-dsi" class="logo-img">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-md-8">
                     <h1 class="display-4">Siyang Ni</h1>
                     <p class="lead">PhD Candidate in Criminology and Social Data Analytics</p>
-                    <hr class="my-4">
                     <p>Department of Sociology and Criminology, Pennsylvania State University</p>
+                    <a href="cv.pdf" class="btn btn-success mt-3" target="_blank">Download CV</a>
+                    <blockquote class="blockquote mt-3">
+                        <p class="mb-0">"Stay hungry. Stay foolish."</p>
+                        <footer class="blockquote-footer">Steve Jobs</footer>
+                    </blockquote>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
+
+    <!-- Summary section -->
+    <div class="section-bg">
         <section id="summary">
-            <h2>Summary of Qualifications</h2>
+    <section id="summary", class="py-4">
+        <div class="container">
+            <h2 class="mb-4">Summary of Qualifications</h2>
             <ul>
                 <li>Experience in: Causal Inference, Time-Series Data, Structural Equation Model</li>
                 <li>Proficient in: R, Python, SQL, Stata, Mplus, Latex, Linux</li>
                 <li>Graduate Instructor on Intermediate Social Statistics</li>
                 <li>Areas of Expertise: Data Science, Life Course, Human Development</li>
             </ul>
-        </section>
+        </div>
+    </section>
+</section>
+</div>
 
-        <section id="contact">
-            <h2>Contact Information</h2>
+    <!-- Latest publication section -->
+    <div class="section-bg">
+        <section id="latest-publication">
+    <section id="latest-publication", class="py-4">
+        <div class="container">
+            <h2>Latest Publication</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Exploring the Gendered Association Between Social Strain, Strain-Induced Negative Emotions, and Delinquency among Left-Behind Children in Rural China: A Test of General Strain Theory</h5>
+                    <p class="card-text">This study examines the gendered association between social strain, strain-induced negative emotions, and delinquency among left-behind children in rural China through the lens of general strain theory.</p>
+                    <a href="publication.pdf" class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+</div>
+
+    <!-- Contact section -->
+    <div class="section-bg">
+        <section id="latest-publication">
+    <section id="contact", class="py-4">
+        <div class="container">
+            <h2 class="mb-4">Contact Information</h2>
             <p>1001 Oswald Tower, Pennsylvania State University, University Park, PA 16801</p>
             <p>Email: siyangni@psu.edu</p>
             <p>Phone: 814-865-2527</p>
-        </section>
-    </main>
+        </div>
+    </section>
+</section>
+</div>
 
-    <footer class="bg-light text-center py-3 mt-4">
-        <p>&copy; 2024 Siyang Ni. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Siyang Ni. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
