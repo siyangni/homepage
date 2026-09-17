@@ -1,126 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siyang Ni - Professional CV</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siyang Ni | Criminology &amp; Social Data Analytics</title>
+<meta name="description" content="Siyang Ni is a Ph.D. candidate in Criminology and Social Data Analytics at Penn State. I study how self-control develops across childhood and adolescence, and what that development predicts for delinquency, substance use, and justice-system contact.">
+<link rel="canonical" href="https://siyangni.com/">
+
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://siyangni.com/">
+<meta property="og:title" content="Siyang Ni | Criminology &amp;amp; Social Data Analytics">
+<meta property="og:description" content="Siyang Ni is a Ph.D. candidate in Criminology and Social Data Analytics at Penn State. I study how self-control develops across childhood and adolescence, and what that development predicts for delinquency, substance use, and justice-system contact.">
+<meta property="og:image" content="https://siyangni.com/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..600&family=Source+Sans+3:ital,wght@0,300..700;1,400..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700&text=SIYANGN%20&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/content.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Siyang Ni",
+  "url": "https://siyangni.com/",
+  "image": "https://siyangni.com/profile3.jpg",
+  "jobTitle": "Ph.D. Candidate, Criminology & Social Data Analytics",
+  "email": "mailto:siyangni@psu.edu",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Pennsylvania State University",
+    "department": "Department of Sociology and Criminology"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The Chinese University of Hong Kong" },
+    { "@type": "CollegeOrUniversity", "name": "Rutgers University" }
+  ],
+  "knowsAbout": [
+    "Life-course criminology", "Self-control development", "Juvenile delinquency",
+    "Adolescent substance use", "Longitudinal data analysis",
+    "Structural equation modeling", "Growth mixture modeling"
+  ],
+  "sameAs": [
+    "https://github.com/siyangni",
+    "https://orcid.org/0009-0003-6305-8189",
+    "https://scholar.google.com/citations?user=vdz1H6wAAAAJ"
+  ]
+}
+</script>
 </head>
 <body>
-    <!-- Navigation menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Siyang Ni</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="education.html">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="research.html">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="teaching.html">Teaching</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="skills.html">Skills</a>
-                </li>
-            </ul>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead__inner">
+    <a class="wordmark" href="/">Siyang Ni</a>
+    <nav class="nav" data-nav aria-label="Main">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" hidden>Menu</button>
+      <ul class="nav__list" id="nav-list">
+        <li><a href="/dissertation.html">Dissertation</a></li>
+        <li><a href="/research.html">Research</a></li>
+        <li><a href="/software.html">Software</a></li>
+        <li><a href="/teaching.html">Teaching</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a class="btn btn--sm" href="/cv.pdf">CV</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-    
-<!-- header -->
-    <header class="jumbotron jumbotron-fluid" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center">
-                    <img src="profile3.jpg" alt="Siyang Ni" class="img-fluid profile-img rounded-circle mb-3">
-                    <div class="logo-container mt-3">
-                        <a href="https://www.icds.psu.edu/" target="_blank">
-                            <img src="psu_dsi.png" alt="psu-dsi" class="logo-img">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <h1 class="display-4">Siyang Ni</h1>
-                    <p class="lead">PhD Candidate in Criminology and Social Data Analytics</p>
-                    <p>Department of Sociology and Criminology, Pennsylvania State University</p>
-                    <a href="cv.pdf" class="btn btn-success mt-3" target="_blank">Download CV</a>
-                    <blockquote class="blockquote mt-3">
-                        <p class="mb-0">"Stay hungry. Stay foolish."</p>
-                        <footer class="blockquote-footer">Steve Jobs</footer>
-                    </blockquote>
-                </div>
+<main id="main">
+
+  <!-- ================================ Hero ================================ -->
+  <section class="hero">
+    <div class="shell">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Criminology &amp; Social Data Analytics<span class="sep">·</span>Penn State</p>
+          <h1 class="display">Siyang Ni</h1>
+          <p class="lede">
+            I study how self-control develops from childhood through adolescence, and how that
+            development shapes delinquency, substance use, and contact with the justice system.
+          </p>
+          <p class="measure" style="margin:0;color:var(--ink-soft)">
+            My work draws on longitudinal models, quasi-experimental designs, and machine
+            learning. I also write open-source software so other researchers can run advanced
+            longitudinal models without proprietary tools.
+          </p>
+          <div class="actions">
+            <a class="btn" href="/dissertation.html#course-not-type">Job market paper</a>
+            <a class="btn btn--ghost" href="/cv.pdf">Download CV</a>
+          </div>
+          <p class="meta" style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-4)">
+            <span class="status status--jmp">On the job market, 2026–27</span>
+            <span>Ph.D. expected 2027</span>
+          </p>
+        </div>
+        <div class="hero__figure">
+          <img src="/profile3.jpg" alt="Portrait of Siyang Ni" width="838" height="874"
+               loading="eager" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+
+      <ul class="facts" aria-label="At a glance">
+        <li><span class="facts__n">3</span><span class="facts__l">papers under review</span></li>
+        <li><span class="facts__n">3</span><span class="facts__l">dissertation papers, one argument</span></li>
+        <li><span class="facts__n">2</span><span class="facts__l">research tools in active use</span></li>
+        <li><span class="facts__n">1</span><span class="facts__l">course taught as instructor of record</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================== Job market paper ========================= -->
+  <section class="section" style="padding-top:0" aria-labelledby="jmp-title">
+    <div class="shell">
+      <div class="feature split split--center" data-expand>
+        <div class="feature__text">
+          <p class="eyebrow">Job market paper</p>
+          <h2 class="title" id="jmp-title">Course, Not Type</h2>
+          <p class="feature__sub">
+            Self-Control Development From Childhood to Adolescence and Criminal Justice Contact
+            at Age 23
+          </p>
+          <p>
+            How a child’s self-control changed between ages 5 and 17 predicts formal contact with
+            the criminal justice system by age 23. The data show no distinct high-risk group of
+            children behind that prediction. Risk differs by degree, not by kind of child.
+          </p>
+          <p class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-3)">
+            <span class="status">Analysis complete</span>
+            <span>Full draft available on request</span>
+          </p>
+          <div class="actions" style="margin-top:var(--s-2)">
+            <a class="btn" href="/dissertation.html#course-not-type">Read the findings</a>
+            <a class="btn btn--ghost" href="/dissertation.html">All three papers</a>
+          </div>
+        </div>
+
+        <figure class="plate">
+          <div class="plate__frame">
+            <picture>
+              <source type="image/webp" srcset="/assets/img/figures/p3-three-classes.webp 800w, /assets/img/figures/p3-three-classes@2x.webp 1600w" sizes="(min-width: 60rem) 34rem, 100vw">
+              <img src="/assets/img/figures/p3-three-classes.png" srcset="/assets/img/figures/p3-three-classes.png 800w, /assets/img/figures/p3-three-classes@2x.png 1600w" sizes="(min-width: 60rem) 34rem, 100vw"
+                   width="800" height="580" loading="lazy" decoding="async"
+                   alt="The best-fitting trajectory classes are three nearly identical lines; no small, persistently high-risk group exists.">
+            </picture>
+          </div>
+          <figcaption>The best-fitting “types” are three nearly identical lines. No small, persistently high-risk group exists.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Selected work ========================== -->
+  <section class="section">
+    <div class="shell">
+      <header class="sec-head">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 class="sec-title">Research and software beyond the dissertation</h2>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="/research.html">All research</a>
+      </header>
+
+      <div class="tiles tiles--4">
+        <a class="tile" href="/research.html#substance-use">
+          <span class="tile__kicker">Under review</span>
+          <h3 class="tile__title">Adolescent substance use</h3>
+          <p class="tile__body">
+            As teen vaping declined, it became a marker of other substance use more than of
+            smoking. Two papers under review at <em>Nicotine &amp; Tobacco Research</em>.
+          </p>
+          <span class="tile__more">About this work</span>
+        </a>
+
+        <a class="tile" href="/research.html#migration">
+          <span class="tile__kicker">Under review</span>
+          <h3 class="tile__title">Parental migration and delinquency</h3>
+          <p class="tile__body">
+            In rural China, adolescents with one migrant parent, not two, reported higher
+            expected delinquency than those with no migrant parent.
+          </p>
+          <span class="tile__more">About this work</span>
+        </a>
+
+        <a class="tile" href="/software.html#surveymixr">
+          <span class="tile__kicker">R package</span>
+          <h3 class="tile__title">surveymixr</h3>
+          <p class="tile__body">
+            Growth mixture models in R that account for survey weights, clusters, and strata.
+            Before it, fitting these models correctly meant using Mplus.
+          </p>
+          <span class="tile__more">About the package</span>
+        </a>
+
+        <a class="tile" href="/software.html#dashboard">
+          <span class="tile__kicker">Dashboard</span>
+          <h3 class="tile__title">American Authorship Database</h3>
+          <p class="tile__body">
+            An R Shiny application for a historical publishing archive, still used by the Penn
+            State College of the Liberal Arts.
+          </p>
+          <span class="tile__more">About the dashboard</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= Materials and contact ===================== -->
+  <section class="section section--wash">
+    <div class="shell split">
+      <div>
+        <header class="sec-head">
+          <div>
+            <p class="eyebrow">Materials</p>
+            <h2 class="sec-title">Application materials</h2>
+          </div>
+        </header>
+        <ul class="materials">
+          <li>
+            <span class="materials__name"><a href="/cv.pdf">Curriculum vitae</a></span>
+            <span class="materials__state">PDF, September 2026</span>
+          </li>
+          <li>
+            <span class="materials__name">Job market paper</span>
+            <span class="materials__state">Full draft available on request</span>
+          </li>
+          <li>
+            <span class="materials__name">Research statement</span>
+            <span class="materials__state">Available on request</span>
+          </li>
+          <li>
+            <span class="materials__name">Teaching statement</span>
+            <span class="materials__state">Available on request</span>
+          </li>
+          <li>
+            <span class="materials__name"><a href="/assets/pdf/sra-2024-poster.pdf">Conference poster</a></span>
+            <span class="materials__state">Society for Research on Adolescence, April 2024</span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="contact">
+        <header class="sec-head">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 class="sec-title">Get in touch</h2>
+            <p class="sec-intro">
+              To request materials or ask about my work, send a message here or email
+              <a href="mailto:siyangni@psu.edu">siyangni@psu.edu</a>.
+            </p>
+          </div>
+        </header>
+
+        <div class="form-card">
+          <!-- To deliver messages without opening the visitor's email app, create a form at
+               formspree.io, put its URL (https://formspree.io/f/...) in both data-endpoint
+               and action, and delete the enctype attribute. -->
+          <form class="form" data-contact data-to="siyangni@psu.edu" data-endpoint=""
+                action="mailto:siyangni@psu.edu" method="post" enctype="text/plain">
+            <div class="form__row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100">
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200">
+              </div>
             </div>
-        </div>
-    </header>
-
-
-    <!-- Summary section -->
-    <div class="section-bg">
-        <section id="summary">
-    <section id="summary", class="py-4">
-        <div class="container">
-            <h2 class="mb-4">Summary of Qualifications</h2>
-            <ul>
-                <li>Experience in: Causal Inference, Time-Series Data, Structural Equation Model</li>
-                <li>Proficient in: R, Python, SQL, Stata, Mplus, Latex, Linux</li>
-                <li>Graduate Instructor on Intermediate Social Statistics</li>
-                <li>Areas of Expertise: Data Science, Life Course, Human Development</li>
-            </ul>
-        </div>
-    </section>
-</section>
-</div>
-
-    <!-- Latest publication section -->
-    <div class="section-bg">
-        <section id="latest-publication">
-    <section id="latest-publication", class="py-4">
-        <div class="container">
-            <h2>Latest Publication</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Exploring the Gendered Association Between Social Strain, Strain-Induced Negative Emotions, and Delinquency among Left-Behind Children in Rural China: A Test of General Strain Theory</h5>
-                    <p class="card-text">This study examines the gendered association between social strain, strain-induced negative emotions, and delinquency among left-behind children in rural China through the lens of general strain theory.</p>
-                    <a href="publication.pdf" class="btn btn-primary" target="_blank">Read More</a>
-                </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="6" required maxlength="5000"></textarea>
             </div>
+            <div class="visually-hidden" aria-hidden="true">
+              <label for="cf-gotcha">Leave this field empty</label>
+              <input id="cf-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form__foot">
+              <button class="btn" type="submit">Send message</button>
+              <p class="form__status" data-status role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
-    </section>
-</section>
-</div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- Contact section -->
-    <div class="section-bg">
-        <section id="latest-publication">
-    <section id="contact", class="py-4">
-        <div class="container">
-            <h2 class="mb-4">Contact Information</h2>
-            <p>1001 Oswald Tower, Pennsylvania State University, University Park, PA 16801</p>
-            <p>Email: siyangni@psu.edu</p>
-            <p>Phone: 814-865-2527</p>
-        </div>
-    </section>
-</section>
-</div>
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name">Siyang Ni</p>
+        <p>
+          Ph.D. candidate in Criminology and Social Data Analytics at Penn State. On the job
+          market in 2026–27.
+        </p>
+        <p><a href="mailto:siyangni@psu.edu">siyangni@psu.edu</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="/dissertation.html">Dissertation</a></li>
+          <li><a href="/research.html">Research</a></li>
+          <li><a href="/software.html">Software</a></li>
+          <li><a href="/teaching.html">Teaching</a></li>
+          <li><a href="/cv.pdf">CV</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul>
+          <li><a href="https://github.com/siyangni">GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=vdz1H6wAAAAJ">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0003-6305-8189">ORCID</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Office</h2>
+        <p>
+          601 Susan Welch Liberal Arts Building<br>
+          Pennsylvania State University<br>
+          University Park, PA 16802
+        </p>
+      </div>
+    </div>
+    <div class="footer__colophon">
+      <span>&copy; 2026 Siyang Ni</span>
+    </div>
+  </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="bg-light text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Siyang Ni. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+<script src="/assets/js/nav.js" defer></script>
+<script src="/assets/js/grow.js" defer></script>
+<script src="/assets/js/contact.js" defer></script>
 </body>
 </html>

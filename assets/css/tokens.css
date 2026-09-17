@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Design tokens — siyangni.com
+
+   The maroon accent comes from the CV so the site and the PDF still read as
+   one identity. The surfaces are warm ivory rather than pure white, and the
+   type pairs a serif display face with a sans for everything functional.
+   ========================================================================== */
+
+:root {
+  /* ---- Ink ------------------------------------------------------------- */
+  --ink:        #191714;   /* display, headings */
+  --body:       #2b2722;   /* body text */
+  --ink-soft:   #4a443b;   /* secondary text */
+  --muted:      #6a6256;   /* metadata, dates, captions */
+
+  /* ---- Accent ---------------------------------------------------------- */
+  --accent:     #5c1f1f;   /* maroon, from the CV */
+  --accent-hi:  #7d2d2d;
+  --accent-tint: rgba(92, 31, 31, .07);
+  --accent-line:    rgba(92, 31, 31, .28);
+  --accent-line-hi: rgba(125, 45, 45, .60);
+
+  /* ---- Surfaces -------------------------------------------------------- */
+  --paper:      #faf9f5;   /* page ground */
+  --surface:    #ffffff;   /* tiles, form fields */
+  --wash:       #efebe2;   /* figure surround */
+  --wash-soft:  #f3f0e8;   /* alternating bands */
+  --rule:       #ddd6ca;
+  --rule-soft:  #e8e3d9;
+
+  /* Dark feature band and footer */
+  --band:        #1f1c18;
+  --band-ink:    #f4eee5;
+  --band-muted:  #b3a999;
+  --band-rule:   #3a342c;
+  --band-accent: #e3b4b4;
+
+  /* Plots are always shown on white: the PNGs have white backgrounds. */
+  --plot-bg:    #ffffff;
+
+  --shadow-sm: 0 1px 2px rgba(25, 23, 20, .05);
+  --shadow-md: 0 1px 2px rgba(25, 23, 20, .04), 0 10px 30px rgba(25, 23, 20, .08);
+
+  /* ---- Type ------------------------------------------------------------ */
+  --font-display: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  --t-display: clamp(2.4rem, 1.7rem + 2.8vw, 3.6rem);
+  --t-title:   clamp(2rem, 1.55rem + 1.8vw, 2.9rem);
+  --t-h2:      clamp(1.55rem, 1.3rem + 1vw, 2.1rem);
+  --t-h3:      clamp(1.2rem, 1.12rem + 0.3vw, 1.35rem);
+  --t-lede:    clamp(1.12rem, 1.04rem + 0.35vw, 1.3rem);
+  --t-body:    clamp(1rem, 0.97rem + 0.12vw, 1.0625rem);
+  --t-small:   0.9rem;
+  --t-label:   0.78rem;
+
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-body:   1.6;
+
+  --measure:   68ch;
+
+  /* ---- Space ----------------------------------------------------------- */
+  --s-1:  0.25rem;
+  --s-2:  0.5rem;
+  --s-3:  0.75rem;
+  --s-4:  1rem;
+  --s-5:  1.5rem;
+  --s-6:  2rem;
+  --s-7:  3rem;
+  --s-8:  4.5rem;
+  --s-section: clamp(3.5rem, 2.5rem + 3.5vw, 6rem);
+  --shell-pad: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+  --shell-max: 78rem;
+  --header-h:  4rem;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --dur:  180ms;
+  --ease: cubic-bezier(.2, .6, .35, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:        #f4eee5;
+    --body:       #e0d7c9;
+    --ink-soft:   #c9c0b2;
+    --muted:      #a2988a;
+
+    --accent:     #d9a5a5;
+    --accent-hi:  #eec2c2;
+    --accent-tint: rgba(217, 165, 165, .10);
+    --accent-line:    rgba(217, 165, 165, .32);
+    --accent-line-hi: rgba(238, 194, 194, .70);
+
+    --paper:      #15130f;
+    --surface:    #1d1a15;
+    --wash:       #26211b;
+    --wash-soft:  #1a1712;
+    --rule:       #3a322a;
+    --rule-soft:  #2c261f;
+
+    /* The band sits lighter than the page in dark mode so it still reads as a band. */
+    --band:        #29231c;
+    --band-ink:    #f4eee5;
+    --band-muted:  #b3a999;
+    --band-rule:   #443b31;
+    --band-accent: #e3b4b4;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+    --shadow-md: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
+  }
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software | Siyang Ni</title>
+<meta name="description" content="surveymixr, an R package for growth mixture modeling under complex survey designs, and the American Authorship Database, a deployed R Shiny dashboard built for the Penn State College of the Liberal Arts.">
+<link rel="canonical" href="https://siyangni.com/software.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://siyangni.com/software.html">
+<meta property="og:title" content="Software | Siyang Ni">
+<meta property="og:description" content="surveymixr, an R package for growth mixture modeling under complex survey designs, and the American Authorship Database, a deployed R Shiny dashboard built for the Penn State College of the Liberal Arts.">
+<meta property="og:image" content="https://siyangni.com/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..600&family=Source+Sans+3:ital,wght@0,300..700;1,400..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700&text=SIYANGN%20&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/content.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead__inner">
+    <a class="wordmark" href="/">Siyang Ni</a>
+    <nav class="nav" data-nav aria-label="Main">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" hidden>Menu</button>
+      <ul class="nav__list" id="nav-list">
+        <li><a href="/dissertation.html">Dissertation</a></li>
+        <li><a href="/research.html">Research</a></li>
+        <li><a href="/software.html" aria-current="page">Software</a></li>
+        <li><a href="/teaching.html">Teaching</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a class="btn btn--sm" href="/cv.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="shell">
+      <div class="hero__grid hero__grid--media">
+        <div class="hero__text">
+          <p class="eyebrow">Software</p>
+          <h1 class="title">Research software</h1>
+          <p class="lede">An R package and a research dashboard, both in use beyond my own work.</p>
+          <p style="margin:0;color:var(--ink-soft)">
+            The package fits a class of models that previously required proprietary software. The
+            dashboard is still in service at Penn State.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#surveymixr">surveymixr</a>
+            <a class="btn btn--ghost" href="#dashboard">The dashboard</a>
+          </div>
+        </div>
+
+        <figure class="media media--wide">
+          <div class="media__stack">
+            <div class="media__frame">
+              <video class="media__video" muted loop playsinline preload="metadata"
+                     poster="/assets/img/surveymixr-demo.jpg" width="1280" height="596" data-autoplay
+                     aria-label="Silent demo: R code calling gmm_survey and plot_trajectories types out, then the three estimated class trajectories and fit statistics appear beside it.">
+                <source src="/assets/video/surveymixr-demo.webm" type="video/webm">
+                <source src="/assets/video/surveymixr-demo.mp4" type="video/mp4">
+              </video>
+              <button class="media__toggle" type="button" data-video-toggle hidden>Pause</button>
+            </div>
+          </div>
+          <figcaption>
+            <code>surveymixr</code> fitting a survey-weighted growth mixture model and plotting
+            the classes. Simulated data, for demonstration.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= surveymixr ============================ -->
+  <section class="section" id="surveymixr" style="padding-top:0">
+    <div class="shell">
+      <header class="sec-head">
+        <div>
+          <p class="eyebrow">R package</p>
+          <h2 class="sec-title" style="font-family:var(--font-mono);font-size:clamp(1.4rem,1.2rem + .8vw,1.8rem)">surveymixr</h2>
+          <p class="sec-intro">Growth mixture models with complex survey designs</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--sm" href="https://github.com/siyangni/surveymixr">Source on GitHub</a>
+          <a class="btn btn--ghost btn--sm" href="https://siyangni.github.io/surveymixr/">Documentation</a>
+        </div>
+      </header>
+
+      <div class="split">
+        <div class="stack">
+          <p>
+            Growth mixture modeling is standard practice in developmental research, and so are
+            complex survey designs with stratification, clustered sampling, and probability
+            weights. Combining the two correctly has effectively required Mplus.
+            <code>surveymixr</code> does it in R, with sandwich standard errors that account for
+            the survey design.
+          </p>
+          <p>
+            I wrote it because the dissertation needed it: the UK Millennium Cohort Study is a
+            stratified, clustered, weighted sample, and the mixture models in
+            <a href="/dissertation.html#course-not-type">Paper 3</a> had to account for that.
+          </p>
+
+          <h3 class="h3" style="padding-top:var(--s-3)">What it implements</h3>
+          <ul class="checks">
+            <li>Stratification, clustering (PSUs), and probability weights, with sandwich standard errors</li>
+            <li>Bootstrap Likelihood Ratio Test (BLRT) and the Lo–Mendell–Rubin test for class enumeration, plus cross-validation</li>
+            <li>Multiple random starts with convergence tracking and local-maximum detection</li>
+            <li>R3STEP auxiliary-variable analysis with classification-uncertainty correction (BCH, ML, and manual)</li>
+            <li>Continuous, binary, ordinal, and count outcomes; linear, quadratic, nonlinear, and free-basis growth</li>
+            <li>Diagnostics for entropy, class proportions, influence, separation, and residuals</li>
+          </ul>
+        </div>
+
+        <div>
+          <div>
+<pre class="code"><code><span class="c"># install.packages("devtools")</span>
+devtools::<span class="f">install_github</span>(<span class="s">"siyangni/surveymixr"</span>)
+
+<span class="f">library</span>(surveymixr)
+
+fit &lt;- <span class="f">gmm_survey</span>(
+  data         = mcs_simulated,
+  id           = <span class="s">"id"</span>,
+  time         = <span class="s">"age"</span>,
+  outcome      = <span class="s">"selfcontrol"</span>,
+  n_classes    = 3,
+  growth_model = <span class="s">"linear"</span>,
+  strata       = <span class="s">"stratum"</span>,
+  cluster      = <span class="s">"psu"</span>,
+  weights      = <span class="s">"weight"</span>,
+  starts       = 500
+)
+
+<span class="f">summary</span>(fit)
+<span class="f">plot</span>(fit, type = <span class="s">"trajectories"</span>)
+<span class="f">diagnose_convergence</span>(fit)</code></pre>
+            <p class="meta" style="margin-top:var(--s-4)">
+              Version 0.2.2<span class="sep">·</span>Initial CRAN submission December 2025<span class="sep">·</span><a href="https://siyangni.github.io/surveymixr/articles/user-manual.html">User manual</a>
+            </p>
+            <figure class="plate" data-grow>
+              <div class="plate__frame">
+                <picture>
+                  <source type="image/webp" srcset="/assets/img/surveymixr-trajectories.webp 900w, /assets/img/surveymixr-trajectories@2x.webp 1800w" sizes="(min-width: 60rem) 34rem, 100vw">
+                  <img src="/assets/img/surveymixr-trajectories.png" srcset="/assets/img/surveymixr-trajectories.png 900w, /assets/img/surveymixr-trajectories@2x.png 1800w" sizes="(min-width: 60rem) 34rem, 100vw"
+                       width="900" height="583" loading="lazy" decoding="async"
+                       alt="Three estimated class trajectories from a survey-weighted growth mixture model: high and stable (49%), improving (33%), and declining (17%), with faint observed individual series behind each class mean.">
+                </picture>
+              </div>
+              <figcaption>
+                Output of <code>plot_trajectories()</code> on simulated data with 4 strata, 80 PSUs,
+                and survey weights. Class means carry 95% survey-adjusted confidence intervals.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= Dashboard ============================= -->
+  <section class="section section--wash" id="dashboard">
+    <div class="shell">
+      <header class="sec-head">
+        <div>
+          <p class="eyebrow">Deployed dashboard</p>
+          <h2 class="sec-title">American Authorship Database</h2>
+          <p class="sec-intro">
+            Built as Data Engineer, Research Support, Office of Digital Pedagogies and
+            Initiatives, Penn State<span class="sep">·</span>May–August 2025
+          </p>
+        </div>
+        <a class="btn btn--sm" href="https://anesko-american-authorship.share.connect.posit.cloud/">Open the dashboard</a>
+      </header>
+
+      <div class="split split--wide-right">
+        <div class="stack">
+          <p>
+            A modular R Shiny application that lets humanities researchers search and analyze a
+            historical publishing archive: 686 books, 65 authors, and 8.1 million recorded
+            copies sold, published between 1843 and 1918. It is
+            <strong>deployed and in ongoing use by the Penn State College of the Liberal Arts</strong>,
+            under the Digital Liberal Arts Research Initiative.
+          </p>
+          <p>Each view is a separate module over a shared data layer:</p>
+          <ul class="chips">
+            <li>Overview</li>
+            <li>Book explorer</li>
+            <li>Sales trends</li>
+            <li>Author analysis</li>
+            <li>Author networks</li>
+            <li>Royalty analysis</li>
+            <li>Income query</li>
+            <li>Genre analysis</li>
+          </ul>
+          <p class="meta">
+            Hosted on Posit Connect Cloud. The first load takes a few seconds while the container
+            starts.
+          </p>
+        </div>
+
+        <div>
+          <figure class="plate" style="margin-top:0" data-grow>
+            <div class="plate__frame">
+              <picture>
+                <source type="image/webp" srcset="/assets/img/dashboard-overview.webp 800w, /assets/img/dashboard-overview@2x.webp 1600w" sizes="(min-width: 60rem) 38rem, 100vw">
+                <img src="/assets/img/dashboard-overview.png" srcset="/assets/img/dashboard-overview.png 800w, /assets/img/dashboard-overview@2x.png 1600w" sizes="(min-width: 60rem) 38rem, 100vw"
+                     width="800" height="417" loading="lazy" decoding="async"
+                     alt="The American Authorship Database dashboard, showing 686 books, 65 authors, 8.1 million copies sold, and an annual book sales time series.">
+              </picture>
+            </div>
+            <figcaption>The overview: headline counts, annual sales, and author gender distribution.</figcaption>
+          </figure>
+          <figure class="plate" style="margin-bottom:0" data-grow>
+            <div class="plate__frame">
+              <picture>
+                <source type="image/webp" srcset="/assets/img/dashboard-networks.webp 800w, /assets/img/dashboard-networks@2x.webp 1600w" sizes="(min-width: 60rem) 38rem, 100vw">
+                <img src="/assets/img/dashboard-networks.png" srcset="/assets/img/dashboard-networks.png 800w, /assets/img/dashboard-networks@2x.png 1600w" sizes="(min-width: 60rem) 38rem, 100vw"
+                     width="800" height="417" loading="lazy" decoding="async"
+                     alt="The author network analysis view, with controls for network type, minimum books per author, publication year range, and gender, beside a plotted author network.">
+              </picture>
+            </div>
+            <figcaption>Author networks: relationships inferred from shared publishers and overlapping publication periods.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Methods ============================== -->
+  <section class="section" id="skills">
+    <div class="shell">
+      <header class="sec-head">
+        <div>
+          <p class="eyebrow">Skills</p>
+          <h2 class="sec-title">Methods and tools</h2>
+        </div>
+      </header>
+      <div class="tiles tiles--2">
+        <div class="tile">
+          <span class="tile__kicker">Methods</span>
+          <ul class="chips">
+            <li>Longitudinal and dynamic models</li>
+            <li>Structural equation modeling</li>
+            <li>Growth mixture and latent class models</li>
+            <li>Multilevel models</li>
+            <li>Machine learning</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <span class="tile__kicker">Tools</span>
+          <ul class="chips">
+            <li>R</li>
+            <li>Python</li>
+            <li>PostgreSQL</li>
+            <li>Stata</li>
+            <li>Mplus</li>
+            <li>LaTeX</li>
+            <li>HTML</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name">Siyang Ni</p>
+        <p>
+          Ph.D. candidate in Criminology and Social Data Analytics at Penn State. On the job
+          market in 2026–27.
+        </p>
+        <p><a href="mailto:siyangni@psu.edu">siyangni@psu.edu</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="/dissertation.html">Dissertation</a></li>
+          <li><a href="/research.html">Research</a></li>
+          <li><a href="/software.html">Software</a></li>
+          <li><a href="/teaching.html">Teaching</a></li>
+          <li><a href="/cv.pdf">CV</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul>
+          <li><a href="https://github.com/siyangni">GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=vdz1H6wAAAAJ">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0003-6305-8189">ORCID</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Office</h2>
+        <p>
+          601 Susan Welch Liberal Arts Building<br>
+          Pennsylvania State University<br>
+          University Park, PA 16802
+        </p>
+      </div>
+    </div>
+    <div class="footer__colophon">
+      <span>&copy; 2026 Siyang Ni</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/nav.js" defer></script>
+<script src="/assets/js/grow.js" defer></script>
+<script src="/assets/js/video.js" defer></script>
+</body>
+</html>

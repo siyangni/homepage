@@ -1,0 +1,23 @@
+# GitHub Pages publishes every tracked file at siyangni.com/<path>.
+# Nothing below should ever be world-readable.
+
+# Everything not used by the published site: CV working files (peer-review
+# proofs, superseded Word CV), showcase source (R scripts, .rds fits, raw
+# recordings), job-market statements, original unstripped photos, the
+# syllabus PDF, and other staging material. Web-ready copies of anything
+# here live under assets/.
+removed/
+
+# WSL "downloaded from the internet" alternate-data-stream artifacts.
+*:Zone.Identifier
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*~
+.vscode/
+.idea/
+
+# Raw video recordings (several GB). Web-sized clips live in assets/video/.
+*.MOV
+*.mov
