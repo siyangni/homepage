@@ -332,3 +332,54 @@ code:not(.code code) {
 /* Keep a caption clear of the window edge while its figure is expanded. */
 [data-expand] figcaption { padding-inline: calc(var(--expand, 1) * var(--shell-pad)); }
 
+
+/* --------------------------------------------------------------------------
+   Risk bars: a small HTML chart for a pair of predicted probabilities.
+   It sits inside .plate__frame, which is always white, so it uses fixed plot
+   colors (matching the R figures) rather than the theme ink.
+   -------------------------------------------------------------------------- */
+.riskbars {
+  --rb-ink: #222222;
+  --rb-muted: #555555;
+  --rb-track: #eef0f2;
+  --rb-hi: #b2182b;
+  --rb-lo: #2166ac;
+  --rb-max: 8;               /* axis maximum, in percent */
+  display: grid;
+  gap: var(--s-4);
+  padding: var(--s-3) var(--s-2);
+  font-family: var(--font-sans);
+  color: var(--rb-ink);
+}
+.riskbars__title { margin: 0; font-size: var(--t-small); font-weight: 600; color: var(--rb-ink); }
+.riskbars__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "label value" "track track";
+  gap: var(--s-1) var(--s-3);
+  align-items: baseline;
+}
+.riskbars__label { grid-area: label; font-size: var(--t-small); color: var(--rb-muted); }
+.riskbars__value {
+  grid-area: value;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--rb-ink);
+  font-variant-numeric: tabular-nums;
+}
+.riskbars__track {
+  grid-area: track;
+  display: block;
+  height: .9rem;
+  background: var(--rb-track);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.riskbars__bar {
+  display: block;
+  height: 100%;
+  width: calc(var(--v) / var(--rb-max) * 100%);
+  background: var(--rb-lo);
+}
+.riskbars__bar--hi { background: var(--rb-hi); }
